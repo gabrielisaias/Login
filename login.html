@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>TaskMaster </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #contenedor {
+            width: 420px;
+        }
+
+        #gbotones {
+            margin-bottom: 15px;
+        }
+
+        .input-group {
+            margin-bottom: 5px;
+        }
+
+        .badge-info {
+            background-color: #5bc0de;
+        }
+    </style>
+</head>
+<body onload="actualizarDatos()">
+    <div id="contenedor" class="container">
+        <header>
+            <h3>TaskMaster</h3>
+            <hr>
+        </header>
+
+        <form class="form-inline">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Nombre" id="nombre" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1"> +1 </span>
+                <input type="text" class="form-control" placeholder="Número de Teléfono" id="movil" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Correo Electrónico" id="email" aria-describedby="basic-addon1">
+            </div>
+        </form>
+        <hr/>
+
+        <div id="gbotones" class="btn-group" role="group" aria-label="...">
+            <button type="button" onclick="guardarDato()" class="btn btn-info">
+                <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Guardar
+            </button>
+            <button type="button" onclick="recuperarDato()" class="btn btn-success">
+                <span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span> Consultar
+            </button>
+            <button type="button" onclick="eliminarDato()" class="btn btn-danger">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar
+            </button>
+        </div>
+
+        <button type="button" onclick="eliminarTodo()" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Eliminar Todos
+        </button>
+        <hr>
+
+        <div id="contactos">
+        </div>
+
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>
